@@ -1,12 +1,12 @@
-package user.model;
+package customer.model;
 
-import Machine.Machine;
+import machine.Machine;
 
 import java.util.List;
 
-public interface IUser {
+public interface ICustomer {
 
-    String getUserName();
+    String getCustomerName();
     int getAge();
     String getAddress();
     String getEmail();

@@ -1,13 +1,12 @@
 package headquarter;
 
 import machine.MachineType;
-import Machine.Machine;
-
-import Machine.factory.MachineFactory;
-import Machine.factory.CaterpillarMachineFactory;
+import machine.Machine;
+import machine.MachineFactory;
+import machine.caterpillar.factory.CaterpillarMachineFactory;
 import order.CompletedOrder;
 import order.Order;
-import shop.Showroom;
+import vendor.Branch;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,63 +14,63 @@ public class Headquarter {
 
         private static Headquarter headquarter;
 
-        private List<Showroom> showroomList;
+        private List<Branch> branchList;
 
         private List<Order> orderList;
 
         private List<CompletedOrder> availableMachinesList;
 
-        private MachineFactory bmwFactory;
+        private MachineFactory caterpillarFactory;
 
         private Headquarter() {
-            this.showroomList = new ArrayList();
+            this.branchList = new ArrayList();
             this.orderList = new ArrayList();
             this.availableMachinesList = new ArrayList();
-            this.bmwFactory = new CaterpillarMachineFactory();
+            this.caterpillarFactory = new CaterpillarMachineFactory();
         }
 
-        public static Headquarter getInstance() {
+        public static synchronized Headquarter getInstance() {
             if (headquarter == null) {
                 headquarter = new Headquarter();
             }
             return headquarter;
         }
 
-        public void addNewShowroom(Showroom showroom) {
-            showroomList.add(showroom);
+        public void addNewBranch(Branch branch) {
+            branchList.add(branch);
         }
 
-        public Showroom getShowroomFromList(String showroomName) {
-            return showroomList.stream()
-                    .filter( showroom -> showroom.getShowroomName().equals(showroomName))
+        public Branch getBranchFromList(String branchName) {
+            return branchList.stream()
+                    .filter( branch -> branch.getBranchName().equals(branchName))
                     .findFirst()
                     .orElse(null);
         }
 
         public void informAboutNewMachines() {
-            showroomList.stream().forEach( showroom -> showroom.getNewMachines(availableMachinesList));
+            branchList.stream().forEach( branch -> branch.getNewMachines(availableMachinesList));
             availableMachinesList = new ArrayList();
         }
 
         public void produceAllMachines() {
             orderList.stream()
                     .forEach((order) -> {
-                        Machine Machine = bmwFactory.orderMachine(order.getMachineType());
-                        availableMachinesList.add(new CompletedOrder(Machine, order.getUserName(), order.getShowroomName()));
+                        Machine Machine = caterpillarFactory.orderMachine(order.getMachineType());
+                        availableMachinesList.add(new CompletedOrder(Machine, order.getCustomerName(), order.getBranchName()));
                     });
             orderList = new ArrayList();
         }
 
-        public void addMachineToOrderList(MachineType MachineType, String userName, String showroomName) {
-            orderList.add(new Order(MachineType, userName, showroomName));
+        public void addMachineToOrderList(MachineType MachineType, String customerName, String branchName) {
+            orderList.add(new Order(MachineType, customerName, branchName));
         }
 
     public static Headquarter getHeadquarter() {
         return headquarter;
     }
 
-    public List<Showroom> getShowroomList() {
-        return showroomList;
+    public List<Branch> getBranchList() {
+        return branchList;
     }
 
     public List<Order> getOrderList() {
@@ -83,6 +82,6 @@ public class Headquarter {
     }
 
     public MachineFactory getFordFactory() {
-        return bmwFactory;
+        return caterpillarFactory;
     }
 }

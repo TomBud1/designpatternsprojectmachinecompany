@@ -1,6 +1,4 @@
-package user.iterator;
-
-import Machine.Machine;
+package machine;
 
 import java.util.List;
 

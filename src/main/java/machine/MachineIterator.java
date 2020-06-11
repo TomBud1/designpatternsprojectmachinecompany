@@ -1,6 +1,6 @@
-package user.iterator;
+package machine;
 
-import Machine.Machine;
+import machine.Machine;
 
 public interface MachineIterator {
 

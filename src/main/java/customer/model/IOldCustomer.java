@@ -1,8 +1,8 @@
-package user.model;
+package customer.model;
 
-import Machine.Machine;
+import machine.Machine;
 
-public interface IOldUser {
+public interface IOldCustomer {
 
     String getFirstName();
     String getSecondName();

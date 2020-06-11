@@ -1,8 +1,8 @@
 package headquarter;
 
-import Machine.Machine;
-import user.model.OldUser;
-import user.model.User;
+import machine.Machine;
+import customer.model.OldCustomer;
+import customer.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,31 +11,31 @@ public class StatisticalOffice {
 
     HeadquarterFacade headquarterFacade;
 
-    List<OldUser> listOfOldUsers;
+    List<OldCustomer> listOfOldCustomers;
 
-    List<User> listOfNewUsers;
+    List<Customer> listOfNewCustomers;
 
     List<Machine> listOfMachines;
 
     public StatisticalOffice() {
         headquarterFacade = new HeadquarterFacade();
-        listOfOldUsers = new ArrayList();
-        listOfNewUsers = new ArrayList();
+        listOfOldCustomers = new ArrayList();
+        listOfNewCustomers = new ArrayList();
         listOfMachines = new ArrayList();
 
-        listOfOldUsers = headquarterFacade.downloadAllOldUsers();
-        listOfNewUsers = headquarterFacade.downloadAllNormalUsers();
+        listOfOldCustomers = headquarterFacade.downloadAllOldCustomers();
+        listOfNewCustomers = headquarterFacade.downloadAllNormalCustomers();
 
-        listOfMachines = headquarterFacade.downloadAllBoughtMachines(listOfOldUsers, listOfNewUsers);
+        listOfMachines = headquarterFacade.downloadAllBoughtMachines(listOfOldCustomers, listOfNewCustomers);
     }
 
     public void presentAllClients() {
-        for (OldUser user: listOfOldUsers) {
-            System.out.println( user.toString());
+        for (OldCustomer customer: listOfOldCustomers) {
+            System.out.println( customer.toString());
             System.out.println("\n");
         }
-        for (User user: listOfNewUsers) {
-            System.out.println(user.toString());
+        for (Customer customer: listOfNewCustomers) {
+            System.out.println(customer.toString());
             System.out.println("\n");
         }
     }

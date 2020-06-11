@@ -1,12 +1,12 @@
-package user.model;
+package customer.model;
 
-import Machine.Machine;
-import user.iterator.MachineArrayIterator;
-import user.iterator.MachineIterator;
+import machine.Machine;
+import machine.MachineArrayIterator;
+import machine.MachineIterator;
 
 import java.util.Arrays;
 
-public class OldUser implements IOldUser {
+public class OldCustomer implements IOldCustomer {
 
     private String firstName;
 
@@ -89,7 +89,7 @@ public class OldUser implements IOldUser {
         this.boughtMachines = boughtMachines;
     }
 
-    public OldUser(String firstName, String secondName, int age, String address, String email, int phoneNumber, Machine[] boughtMachines) {
+    public OldCustomer(String firstName, String secondName, int age, String address, String email, int phoneNumber, Machine[] boughtMachines) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;
@@ -101,7 +101,7 @@ public class OldUser implements IOldUser {
 
     @Override
     public String toString() {
-        return "OldUser{" +
+        return "OldCustomer{" +
                 "firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", age=" + age +

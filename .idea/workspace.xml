@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccb7da54-4baa-46f2-a4fe-78ae3644479d" name="Default Changelist" comment="" />
+    <list default="true" id="ccb7da54-4baa-46f2-a4fe-78ae3644479d" name="Default Changelist" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/customer/CustomerBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CustomerTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CustomersAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MachineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/headquarter/Headquarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/headquarter/Headquarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/headquarter/HeadquarterFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/headquarter/HeadquarterFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/headquarter/StatisticalOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/headquarter/StatisticalOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/machine/caterpillar/factory/CaterpillarMachineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/machine/caterpillar/factory/CaterpillarMachineFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/order/CompletedOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/order/CompletedOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/MachineShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vendor/MachineVendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Showroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vendor/Branch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/adapter/OldUserAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/OldCustomerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/adapter/UserAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/CustomerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/builder/UserBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/iterator/WeaponArrayIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/machine/MachineArrayIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/iterator/WeaponIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/machine/MachineIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/iterator/WeaponListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/machine/MachineListIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/model/IOldUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/model/IOldCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/model/IUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/model/ICustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/model/OldUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/model/OldCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/userManager/IUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/manager/ICustomerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/userManager/OldUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/manager/OldCustomerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/userManager/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customer/manager/CustomerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BuilderOrFactoryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BuilderOrFactoryCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CarTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UsersAdapterTest.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,61 +44,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/machine/Machine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/machine/MachineFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/machine/MachineType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarCompactor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/factory/CaterpillarMachineFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="-174">
+              <caret line="190" column="5" selection-start-line="137" selection-end-line="190" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,12 +60,211 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CustomerTransfer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/headquarter/Headquarter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/customer/manager/CustomerManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CustomersAdapterTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MachineTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/order/CompletedOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/customer/CustomerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/customer/CustomerBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BuilderOrFactoryCustomer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GUN</find>
+      <find>hatchBagMachine</find>
+      <find>DOZER</find>
+      <find>kombiMachine</find>
+      <find>limousineMachine</find>
+      <find>EXCAVATOR</find>
+      <find>MINI_RIFLEMachine</find>
+      <find>bmwFactory</find>
+      <find>branch</find>
+      <find>Br</find>
+      <find>Showroom</find>
+      <find>showroom</find>
+      <find>gdanskBranch</find>
+      <find>warszawaBranch</find>
+      <find>gdyniaShowRoom</find>
+      <find>oldUserAdapter</find>
+      <find>oldUser</find>
+      <find>getUserManager</find>
+      <find>addUser</find>
+      <find>newUser</find>
+      <find>User</find>
+      <find>user</find>
+      <find>Gdansk</find>
+      <find>gdynia</find>
+      <find>preparesilesianBranch</find>
+      <find>create</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>DOZER</replace>
+      <replace>compactor</replace>
+      <replace>dozer</replace>
+      <replace>drill</replace>
+      <replace>EXCAVATOR</replace>
+      <replace>excavator</replace>
+      <replace>caterpillarFactory</replace>
+      <replace>Branch</replace>
+      <replace>branch</replace>
+      <replace>pomeranianBranch</replace>
+      <replace>masovianBranch</replace>
+      <replace>silensianBranch</replace>
+      <replace>oldCustomerAdapter</replace>
+      <replace>oldCustomer</replace>
+      <replace>getCustomerManager</replace>
+      <replace>addCustomer</replace>
+      <replace>newCustomer</replace>
+      <replace>Customer</replace>
+      <replace>customer</replace>
+      <replace>Pomeranian</replace>
+      <replace>silesian</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/machine/caterpillar/factory/CaterpillarMachineFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/order/CompletedOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/headquarter/HeadquarterFacade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/headquarter/StatisticalOffice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/iterator/MachineIterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/iterator/WeaponArrayIterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/iterator/MachineListIterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/userManager/OldUserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/userManager/IUserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/userManager/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/model/IOldUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/model/IUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/model/OldUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/user/builder/UserBuilder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CarTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/UsersAdapterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MachineTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shop/Branch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shop/MachineSales.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shop/MachineVendor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/adapter/OldCustomerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/adapter/CustomerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/userManager/ICustomerManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/userManager/CustomerManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/CustomerType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/model/IOldCustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/model/OldCustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/CustomerBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/machine/MachineListIterator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/manager/OldCustomerManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BuilderOrFactoryCustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/customer/manager/CustomerManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ApplicationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CustomerTransfer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/headquarter/Headquarter.java" />
       </list>
     </option>
   </component>
@@ -88,11 +274,13 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +312,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="headquarter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -140,31 +354,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="machine" type="462c0819:PsiDirectoryNode" />
-              <item name="caterpillar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="machine" type="462c0819:PsiDirectoryNode" />
-              <item name="caterpillar" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
               <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -174,13 +377,20 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="designpatternsprojectmachinecompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="designpatternsprojectmachinecompany" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,6 +403,63 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JUnit.CustomerTransfer">
+    <configuration name="ApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designpatternsprojectmachinecompany" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.should_move_client_from_masovian_to_pomeranian" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designpatternsprojectmachinecompany" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
+      <option name="METHOD_NAME" value="should_move_client_from_masovian_to_pomeranian" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designpatternsprojectmachinecompany" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CustomerTransfer" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomersAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designpatternsprojectmachinecompany" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CustomersAdapterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designpatternsprojectmachinecompany" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MachineTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CustomerTransfer" />
+        <item itemvalue="JUnit.ApplicationTest" />
+        <item itemvalue="JUnit.CustomersAdapterTest" />
+        <item itemvalue="JUnit.ApplicationTest.should_move_client_from_masovian_to_pomeranian" />
+        <item itemvalue="JUnit.MachineTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -207,42 +474,253 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ApplicationTest - 2020.06.11 at 17h 32m 58s.xml">
+      <configuration name="ApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest - 2020.06.11 at 17h 42m 25s.xml">
+      <configuration name="ApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest - 2020.06.11 at 17h 42m 38s.xml">
+      <configuration name="ApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest_should_move_client_from_masovian_to_pomeranian - 2020.06.11 at 17h 44m 13s.xml">
+      <configuration name="ApplicationTest.should_move_client_from_masovian_to_pomeranian" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest - 2020.06.11 at 17h 50m 38s.xml">
+      <configuration name="ApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomersAdapterTest - 2020.06.11 at 17h 51m 36s.xml">
+      <configuration name="CustomersAdapterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest - 2020.06.11 at 17h 51m 40s.xml">
+      <configuration name="ApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTransfer - 2020.06.11 at 17h 55m 30s.xml">
+      <configuration name="CustomerTransfer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest - 2020.06.11 at 17h 56m 41s.xml">
+      <configuration name="ApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTransfer - 2020.06.11 at 17h 56m 48s.xml">
+      <configuration name="CustomerTransfer" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27238807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/factory/CaterpillarMachineFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarExcavator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarTruck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarTrackLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarDrill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarDozer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/CaterpillarCompactor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/manager/OldCustomerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/manager/ICustomerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/MachineListIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/model/ICustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/model/IOldCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/model/OldCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/CustomerType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/headquarter/HeadquarterFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/headquarter/StatisticalOffice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/MachineIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/OldCustomerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/MachineArrayIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/machine/Machine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -253,31 +731,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/machine/Machine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vendor/MachineVendor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/order/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="1381" column="31" selection-start-line="1381" selection-start-column="31" selection-end-line="1381" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/stream/ReferencePipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="417" column="8" selection-start-line="417" selection-start-column="8" selection-end-line="417" selection-end-column="8" />
+          <folding>
+            <element signature="e#15146#15147#0" expanded="true" />
+            <element signature="e#15205#15206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vendor/Branch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/manager/CustomerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CustomerTransfer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/headquarter/Headquarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-174">
+          <caret line="190" column="5" selection-start-line="137" selection-end-line="190" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BuilderOrFactoryCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CustomersAdapterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/machine/MachineType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/machine/caterpillar/factory/CaterpillarMachineFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/order/CompletedOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/CustomerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/customer/CustomerBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,6 +1,7 @@
-package user.iterator;
+package machine;
 
-import Machine.Machine;
+import machine.Machine;
+import machine.MachineIterator;
 
 public class MachineArrayIterator implements MachineIterator {
 

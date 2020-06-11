@@ -1,14 +1,14 @@
-package user.model;
+package customer.model;
 
-import Machine.Machine;
-import user.iterator.MachineIterator;
-import user.iterator.MachineListIterator;
+import machine.Machine;
+import machine.MachineIterator;
+import machine.MachineListIterator;
 
 import java.util.List;
 
-public class User implements IUser {
+public class Customer implements ICustomer {
 
-    private String userName;
+    private String customerName;
 
     private int age;
 
@@ -25,12 +25,12 @@ public class User implements IUser {
     }
 
     @Override
-    public String getUserName() {
-        return userName;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public int getAge() {
@@ -75,8 +75,8 @@ public class User implements IUser {
 
     @Override
     public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
+        return "Customer{" +
+                "customerName='" + customerName + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +

@@ -15,7 +15,7 @@ public class CaterpillarMachineFactory extends MachineFactory {
         return machineFactory;
     }
 
-    Machine createMachine(MachineType machineType) {
+    public Machine createMachine(MachineType machineType) {
         if (machineType.equals(MachineType.COMPACTOR)) {
             return new CaterpillarCompactor();
         } else if (machineType.equals(MachineType.DOZER)) {

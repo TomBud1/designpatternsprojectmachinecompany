@@ -1,9 +1,9 @@
 package headquarter;
-import user.iterator.MachineIterator;
-import user.UserType;
-import Machine.Machine;
-import user.model.OldUser;
-import user.model.User;
+import machine.MachineIterator;
+import customer.CustomerType;
+import machine.Machine;
+import customer.model.OldCustomer;
+import customer.model.Customer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,31 +15,31 @@ public class HeadquarterFacade {
         this.headquarter = headquarter.getInstance();
     }
 
-    public List<User> downloadAllNormalUsers() {
-        List<User> allNormalUsers = new ArrayList();
-        headquarter.getShowroomList().stream().
-                forEach(showroom -> {
-                    if(showroom.getTypeOfUsers() == UserType.NORMAL) {
-                        allNormalUsers.addAll(showroom.getUserManager().getAllUser());
+    public List<Customer> downloadAllNormalCustomers() {
+        List<Customer> allNormalCustomers = new ArrayList();
+        headquarter.getBranchList().stream().
+                forEach(branch -> {
+                    if(branch.getTypeOfCustomers() == CustomerType.NORMAL) {
+                        allNormalCustomers.addAll(branch.getCustomerManager().getAllCustomer());
                     }
                 });
 
-        return allNormalUsers;
+        return allNormalCustomers;
     }
 
-    public List<OldUser> downloadAllOldUsers() {
-        List<OldUser> allOldUsers = new ArrayList();
-        headquarter.getShowroomList().stream().
-                forEach(showroom -> {
-                    if(showroom.getTypeOfUsers() == UserType.OLD) {
-                        allOldUsers.addAll(showroom.getUserManager().getAllUser());
+    public List<OldCustomer> downloadAllOldCustomers() {
+        List<OldCustomer> allOldCustomers = new ArrayList();
+        headquarter.getBranchList().stream().
+                forEach(branch -> {
+                    if(branch.getTypeOfCustomers() == CustomerType.OLD) {
+                        allOldCustomers.addAll(branch.getCustomerManager().getAllCustomer());
                     }
                 });
 
-        return allOldUsers;
+        return allOldCustomers;
     }
 
-    public List<Machine> downloadAllBoughtMachines(List<OldUser> allOldUsers, List<User> allNormalUsers) {
+    public List<Machine> downloadAllBoughtMachines(List<OldCustomer> allOldCustomers, List<Customer> allNormalCustomers) {
         List<Machine> MachineList = new ArrayList();
         getAllMachinesIterator().stream()
                 .forEach( (iterator) -> {
@@ -52,8 +52,8 @@ public class HeadquarterFacade {
 
     private List<MachineIterator> getAllMachinesIterator() {
         List<MachineIterator> MachineIterators = new ArrayList();
-        downloadAllNormalUsers().stream().forEach(user -> MachineIterators.add(user.createIterator()));
-        downloadAllOldUsers().stream().forEach( user -> MachineIterators.add(user.createIterator()));
+        downloadAllNormalCustomers().stream().forEach(customer -> MachineIterators.add(customer.createIterator()));
+        downloadAllOldCustomers().stream().forEach( customer -> MachineIterators.add(customer.createIterator()));
         return MachineIterators;
     }
 

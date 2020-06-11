@@ -6,14 +6,14 @@ import order.CompletedOrder;
 import order.Order;
 import org.junit.Before;
 import org.junit.Test;
-import shop.Showroom;
-import user.UserType;
-import user.adapter.OldUserAdapter;
-import user.builder.UserBuilder;
-import user.model.IOldUser;
-import user.model.IUser;
-import user.model.OldUser;
-import user.model.User;
+import vendor.Branch;
+import customer.CustomerType;
+import customer.OldCustomerAdapter;
+import customer.CustomerBuilder;
+import customer.model.IOldCustomer;
+import customer.model.ICustomer;
+import customer.model.OldCustomer;
+import customer.model.Customer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,41 +23,41 @@ public class ApplicationTest {
 
     Headquarter headquarter;
 
-    Showroom gdanskShowroom;
+    Branch pomeranianBranch;
 
-    Showroom warszawaShowroom;
+    Branch masovianBranch;
 
-    Showroom gdyniaShowRoom;
+    Branch silensianBranch;
 
 
     @Before
     public void prepareData() {
         headquarter = headquarter.getInstance();
 
-        createshowroom();
+        createBranch();
 
-        headquarter.addNewShowroom(gdanskShowroom);
-        headquarter.addNewShowroom(warszawaShowroom);
-        headquarter.addNewShowroom(gdyniaShowRoom);
+        headquarter.addNewBranch(pomeranianBranch);
+        headquarter.addNewBranch(masovianBranch);
+        headquarter.addNewBranch(silensianBranch);
 
     }
 
     @Test
-    public void should_order_GUN_Machine_for_new_user() {
-        IUser client = (IUser) gdanskShowroom.getUserManager().getUser("Jan Kowalski");
-        gdanskShowroom.getMachineShop().orderMachine(MachineType.GUN, client.getUserName(), gdanskShowroom.getShowroomName());
+    public void should_order_dozer_machine_for_new_customer() {
+        ICustomer client = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Kowalski");
+        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
 
         Order order = headquarter.getOrderList().stream()
-                .filter(item -> item.getUserName().equals("Jan Kowalski"))
+                .filter(item -> item.getCustomerName().equals("Jan Kowalski"))
                 .findFirst().orElse(null);
 
         System.out.println(order.toString());
     }
 
     @Test
-    public void should_build_ordered_Machine() {
-        IUser client = (IUser) gdanskShowroom.getUserManager().getUser("Jan Kowalski");
-        gdanskShowroom.getMachineShop().orderMachine(MachineType.GUN, client.getUserName(), gdanskShowroom.getShowroomName());
+    public void should_build_ordered_machine() {
+        ICustomer client = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Kowalski");
+        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
         headquarter.produceAllMachines();
 
         List<CompletedOrder> CompletedOrder = headquarter.getAvailableMachinesList();
@@ -66,97 +66,57 @@ public class ApplicationTest {
     }
 
     @Test
-    public void should_get_Machine_from_headquarter() {
+    public void should_get_machine_from_headquarter() {
 
-        IUser client = (IUser) gdanskShowroom.getUserManager().getUser("Jan Kowalski");
-        IUser client2 = (IUser) gdyniaShowRoom.getUserManager().getUser("Witold Morze");
-        IOldUser client3 = (IOldUser) warszawaShowroom.getUserManager().getUser("Prezes");
+        ICustomer client = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Kowalski");
+        ICustomer client2 = (ICustomer) silensianBranch.getCustomerManager().getCustomer("Witold Morze");
+        IOldCustomer client3 = (IOldCustomer) masovianBranch.getCustomerManager().getCustomer("Prezes");
 
-        gdanskShowroom.getMachineShop().orderMachine(MachineType.GUN, client.getUserName(), gdanskShowroom.getShowroomName());
-        gdyniaShowRoom.getMachineShop().orderMachine(MachineType.MODULAR, client2.getUserName(), gdyniaShowRoom.getShowroomName());
-        warszawaShowroom.getMachineShop().orderMachine(MachineType.LIMOUSINE, client3.getSecondName(), warszawaShowroom.getShowroomName());
-        warszawaShowroom.getMachineShop().orderMachine(MachineType.MINI_RIFLE, client3.getSecondName(), warszawaShowroom.getShowroomName());
+        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
+        silensianBranch.getMachineShop().orderMachine(MachineType.COMPACTOR, client2.getCustomerName(), silensianBranch.getBranchName());
+        masovianBranch.getMachineShop().orderMachine(MachineType.DRILL, client3.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineShop().orderMachine(MachineType.EXCAVATOR, client3.getSecondName(), masovianBranch.getBranchName());
 
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();
 
         System.out.println("Jan Kowalski: ");
-        System.out.println(((IUser) gdanskShowroom.getUserManager()
-                .getUser("Jan Kowalski"))
+        System.out.println(((ICustomer) pomeranianBranch.getCustomerManager()
+                .getCustomer("Jan Kowalski"))
                 .getBoughtMachines()
                 .toString());
         System.out.println("\n");
 
         System.out.println("Witold Morze: ");
-        System.out.println(((IUser) gdyniaShowRoom.getUserManager()
-                .getUser("Witold Morze"))
+        System.out.println(((ICustomer) silensianBranch.getCustomerManager()
+                .getCustomer("Witold Morze"))
                 .getBoughtMachines()
                 .toString());
         System.out.println("\n");
 
         System.out.println("Jan Prezes: ");
         System.out.println(Arrays.toString(
-                ((IOldUser) warszawaShowroom.getUserManager()
-                        .getUser("Prezes"))
+                ((IOldCustomer) masovianBranch.getCustomerManager()
+                        .getCustomer("Prezes"))
                         .getBoughtMachines()));
 
     }
 
-    @Test
-    public void should_move_client_from_warsaw_to_gdansk() {
-
-        IOldUser oldUser = (IOldUser) warszawaShowroom.getUserManager().getUser("Prezes");
-
-        warszawaShowroom.getMachineShop().orderMachine(MachineType.RIFLE, oldUser.getSecondName(), warszawaShowroom.getShowroomName());
-        warszawaShowroom.getMachineShop().orderMachine(MachineType.GUN, oldUser.getSecondName(), warszawaShowroom.getShowroomName());
-
-        headquarter.produceAllMachines();
-        headquarter.informAboutNewMachines();
-
-        OldUserAdapter oldUserAdapter = new OldUserAdapter(oldUser);
-
-        IUser newUser = new UserBuilder()
-                .withUserName(oldUserAdapter.getUserName())
-                .withAddress(oldUserAdapter.getAddress())
-                .withAge(oldUserAdapter.getAge())
-                .withEmail(oldUserAdapter.getEmail())
-                .withPhoneNumber(oldUserAdapter.getPhoneNumber())
-                .withBoughtMachines(oldUserAdapter.getBoughtMachines())
-                .buildUser();
-
-        gdanskShowroom.getUserManager().addUser(newUser);
-
-        IUser newGdanskUser = (IUser) gdanskShowroom.getUserManager().getUser("Jan Prezes");
-
-        gdanskShowroom.getMachineShop().orderMachine(MachineType.MODULAR, newGdanskUser.getUserName(), gdanskShowroom.getShowroomName());
-
-        headquarter.produceAllMachines();
-        headquarter.informAboutNewMachines();
-
-        System.out.println("Jan Prezes: ");
-        ((IUser) gdanskShowroom.getUserManager()
-                .getUser("Jan Prezes"))
-                .getBoughtMachines()
-                .forEach( Machine -> {
-                    System.out.println(Machine.toString());
-                    System.out.println("\n");
-                });
-    }
 
     @Test
     public void should_share_data_with_statistics_office() {
 
-        IUser client = (IUser) gdanskShowroom.getUserManager().getUser("Jan Kowalski");
-        IUser client2 = (IUser) gdyniaShowRoom.getUserManager().getUser("Witold Morze");
-        IOldUser client3 = (IOldUser) warszawaShowroom.getUserManager().getUser("Prezes");
+        ICustomer client = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Kowalski");
+        ICustomer client2 = (ICustomer) silensianBranch.getCustomerManager().getCustomer("Witold Morze");
+        IOldCustomer client3 = (IOldCustomer) masovianBranch.getCustomerManager().getCustomer("Prezes");
 
-        gdanskShowroom.getMachineShop().orderMachine(MachineType.GUN, client.getUserName(), gdanskShowroom.getShowroomName());
-        gdanskShowroom.getMachineShop().orderMachine(MachineType.RIFLE, client.getUserName(), gdanskShowroom.getShowroomName());
+        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
+        pomeranianBranch.getMachineShop().orderMachine(MachineType.COMPACTOR, client.getCustomerName(), pomeranianBranch.getBranchName());
 
-        gdyniaShowRoom.getMachineShop().orderMachine(MachineType.MODULAR, client2.getUserName(), gdyniaShowRoom.getShowroomName());
+        silensianBranch.getMachineShop().orderMachine(MachineType.DRILL, client2.getCustomerName(), silensianBranch.getBranchName());
 
-        warszawaShowroom.getMachineShop().orderMachine(MachineType.LIMOUSINE, client3.getSecondName(), warszawaShowroom.getShowroomName());
-        warszawaShowroom.getMachineShop().orderMachine(MachineType.MINI_RIFLE, client3.getSecondName(), warszawaShowroom.getShowroomName());
+        masovianBranch.getMachineShop().orderMachine(MachineType.EXCAVATOR, client3.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineShop().orderMachine(MachineType.TRACK_LOADER, client3.getSecondName(), masovianBranch.getBranchName());
 
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();
@@ -170,31 +130,31 @@ public class ApplicationTest {
         StatisticalOffice.presentAllMachines();
     }
 
-    private void createshowroom() {
-        prepareGdanskShowroom();
-        preparegdyniaShowroom();
-        prepareWarszawaShowroom();
+    private void createBranch() {
+        preparePomeranianBranch();
+        prepareSilesianBranch();
+        prepareWarszawaBranch();
     }
 
-    private void prepareGdanskShowroom() {
-        gdanskShowroom = new Showroom("gdanskShowroom", UserType.NORMAL);
+    private void preparePomeranianBranch() {
+        pomeranianBranch = new Branch("pomeranianBranch", CustomerType.NORMAL);
 
-        User janKowalski = new UserBuilder()
-                .withUserName("Jan Kowalski")
+        Customer janKowalski = new CustomerBuilder()
+                .withCustomerName("Jan Kowalski")
                 .withAge(29)
                 .withAddress("Dluga 10")
                 .withEmail("jankowalski@example.com")
                 .withPhoneNumber(123123123)
                 .withBoughtMachines(new ArrayList())
-                .buildUser();
+                .buildCustomer();
 
-        gdanskShowroom.getUserManager().addUser(janKowalski);
+        pomeranianBranch.getCustomerManager().addCustomer(janKowalski);
     }
 
-    private void prepareWarszawaShowroom() {
-        warszawaShowroom = new Showroom("warszawaShowroom", UserType.OLD);
+    private void prepareWarszawaBranch() {
+        masovianBranch = new Branch("masovianBranch", CustomerType.OLD);
 
-        OldUser jaroslawJarzabek = new OldUser(
+        OldCustomer jaroslawJarzabek = new OldCustomer(
                 "Jaroslaw",
                 "Jarzabek",
                 41,
@@ -204,7 +164,7 @@ public class ApplicationTest {
                 new Machine[100]
         );
 
-        OldUser andrzejNowak = new OldUser(
+        OldCustomer andrzejNowak = new OldCustomer(
                 "Andrzej",
                 "Nowak",
                 22,
@@ -214,7 +174,7 @@ public class ApplicationTest {
                 new Machine[100]
         );
 
-        OldUser janPrezes = new OldUser(
+        OldCustomer janPrezes = new OldCustomer(
                 "Jan",
                 "Prezes",
                 49,
@@ -224,43 +184,43 @@ public class ApplicationTest {
                 new Machine[100]
         );
 
-        warszawaShowroom.getUserManager().addUser(jaroslawJarzabek);
-        warszawaShowroom.getUserManager().addUser(andrzejNowak);
-        warszawaShowroom.getUserManager().addUser(janPrezes);
+        masovianBranch.getCustomerManager().addCustomer(jaroslawJarzabek);
+        masovianBranch.getCustomerManager().addCustomer(andrzejNowak);
+        masovianBranch.getCustomerManager().addCustomer(janPrezes);
 
     }
 
-    private void preparegdyniaShowroom() {
-        gdyniaShowRoom = new Showroom("gdyniaShowroom", UserType.NORMAL);
+    private void prepareSilesianBranch() {
+        silensianBranch = new Branch("silesianBranch", CustomerType.NORMAL);
 
-        User lidiaWojas = new UserBuilder()
-                .withUserName("Lidia Wojas")
+        Customer lidiaWojas = new CustomerBuilder()
+                .withCustomerName("Lidia Wojas")
                 .withAge(22)
                 .withAddress("Swietojanska 32")
                 .withEmail("lidiawojas@example.com")
                 .withBoughtMachines(new ArrayList())
-                .buildUser();
+                .buildCustomer();
 
-        User katarzynaKochanowska = new UserBuilder()
-                .withUserName("Katarzyna Kochanowska")
+        Customer katarzynaKochanowska = new CustomerBuilder()
+                .withCustomerName("Katarzyna Kochanowska")
                 .withAge(41)
                 .withAddress("Wielkopolska 13")
                 .withPhoneNumber(321321321)
                 .withBoughtMachines(new ArrayList())
-                .buildUser();
+                .buildCustomer();
 
-        User witoldMorze = new UserBuilder()
-                .withUserName("Witold Morze")
+        Customer witoldMorze = new CustomerBuilder()
+                .withCustomerName("Witold Morze")
                 .withAge(91)
                 .withAddress("Morska 3")
                 .withEmail("witoldmorze@example.com")
                 .withPhoneNumber(321321997)
                 .withBoughtMachines(new ArrayList())
-                .buildUser();
+                .buildCustomer();
 
-        gdyniaShowRoom.getUserManager().addUser(lidiaWojas);
-        gdyniaShowRoom.getUserManager().addUser(katarzynaKochanowska);
-        gdyniaShowRoom.getUserManager().addUser(witoldMorze);
+        silensianBranch.getCustomerManager().addCustomer(lidiaWojas);
+        silensianBranch.getCustomerManager().addCustomer(katarzynaKochanowska);
+        silensianBranch.getCustomerManager().addCustomer(witoldMorze);
     }
 
 }

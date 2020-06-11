@@ -1,15 +1,15 @@
 package order;
-import Machine.Machine;
+import machine.Machine;
 
 public class CompletedOrder {
     private Machine Machine;
-    private String userName;
-    private String showroomName;
+    private String customerName;
+    private String branchName;
 
-    public CompletedOrder(Machine Machine, String userName, String showroomName) {
+    public CompletedOrder(Machine Machine, String customerName, String branchName) {
         this.Machine = Machine;
-        this.userName = userName;
-        this.showroomName = showroomName;
+        this.customerName = customerName;
+        this.branchName = branchName;
     }
 
     public Machine getMachine() {
@@ -20,20 +20,20 @@ public class CompletedOrder {
         this.Machine = Machine;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public String getShowroomName() {
-        return showroomName;
+    public String getBranchName() {
+        return branchName;
     }
 
-    public void setShowroomName(String showroomName) {
-        this.showroomName = showroomName;
+    public void setBranchName(String branchName) {
+        this.branchName = branchName;
     }
 }
 
