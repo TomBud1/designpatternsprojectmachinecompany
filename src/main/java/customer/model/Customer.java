@@ -10,8 +10,6 @@ public class Customer implements ICustomer {
 
     private String customerName;
 
-    private int age;
-
     private String address;
 
     private String email;
@@ -31,14 +29,6 @@ public class Customer implements ICustomer {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getAddress() {
@@ -77,7 +67,6 @@ public class Customer implements ICustomer {
     public String toString() {
         return "Customer{" +
                 "customerName='" + customerName + '\'' +
-                ", age=" + age +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +

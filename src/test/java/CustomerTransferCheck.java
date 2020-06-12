@@ -14,7 +14,7 @@ import vendor.Branch;
 
 import java.util.ArrayList;
 
-public class CustomerTransfer {
+public class CustomerTransferCheck {
 
 
     Headquarter headquarter;
@@ -27,7 +27,7 @@ public class CustomerTransfer {
 
     private void createBranch() {
         preparePomeranianBranch();
-        prepareWarszawaBranch();
+        prepareMasovianBranch();
     }
 
 
@@ -36,7 +36,6 @@ public class CustomerTransfer {
 
         Customer janKowalski = new CustomerBuilder()
                 .withCustomerName("Jan Kowalski")
-                .withAge(29)
                 .withAddress("Dluga 10")
                 .withEmail("jankowalski@example.com")
                 .withPhoneNumber(123123123)
@@ -46,13 +45,12 @@ public class CustomerTransfer {
         pomeranianBranch.getCustomerManager().addCustomer(janKowalski);
     }
 
-    private void prepareWarszawaBranch() {
+    private void prepareMasovianBranch() {
         masovianBranch = new Branch("masovianBranch", CustomerType.OLD);
 
         OldCustomer jaroslawJarzabek = new OldCustomer(
                 "Jaroslaw",
                 "Jarzabek",
-                41,
                 "Pogodna 29",
                 "jaroslawjarzabek@example.com",
                 123123123,
@@ -62,7 +60,6 @@ public class CustomerTransfer {
         OldCustomer andrzejNowak = new OldCustomer(
                 "Andrzej",
                 "Nowak",
-                22,
                 "Lazarska 10",
                 "andrzejnowak@example.com",
                 123123113,
@@ -72,7 +69,6 @@ public class CustomerTransfer {
         OldCustomer janPrezes = new OldCustomer(
                 "Jan",
                 "Prezes",
-                49,
                 "Wiejska 5",
                 "janprezes@szef.com",
                 123523113,
@@ -113,7 +109,6 @@ public class CustomerTransfer {
         ICustomer newCustomer = new CustomerBuilder()
                 .withCustomerName(oldCustomerAdapter.getCustomerName())
                 .withAddress(oldCustomerAdapter.getAddress())
-                .withAge(oldCustomerAdapter.getAge())
                 .withEmail(oldCustomerAdapter.getEmail())
                 .withPhoneNumber(oldCustomerAdapter.getPhoneNumber())
                 .withBoughtMachines(oldCustomerAdapter.getBoughtMachines())

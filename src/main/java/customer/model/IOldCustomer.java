@@ -6,7 +6,6 @@ public interface IOldCustomer {
 
     String getFirstName();
     String getSecondName();
-    int getAge();
     String getAddress();
     String getEmail();
     int getPhoneNumber();

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ApplicationTest {
+public class ApplicationCheck {
 
     Headquarter headquarter;
 
@@ -121,13 +121,13 @@ public class ApplicationTest {
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();
 
-        StatisticalOffice StatisticalOffice = new StatisticalOffice();
+        StatisticalOffice statisticalOffice = new StatisticalOffice();
 
         System.out.println("Clients: ");
-        StatisticalOffice.presentAllClients();
+        statisticalOffice.presentAllClients();
         System.out.println("\n");
         System.out.println("Machines: ");
-        StatisticalOffice.presentAllMachines();
+        statisticalOffice.presentAllMachines();
     }
 
     private void createBranch() {
@@ -141,7 +141,6 @@ public class ApplicationTest {
 
         Customer janKowalski = new CustomerBuilder()
                 .withCustomerName("Jan Kowalski")
-                .withAge(29)
                 .withAddress("Dluga 10")
                 .withEmail("jankowalski@example.com")
                 .withPhoneNumber(123123123)
@@ -157,7 +156,6 @@ public class ApplicationTest {
         OldCustomer jaroslawJarzabek = new OldCustomer(
                 "Jaroslaw",
                 "Jarzabek",
-                41,
                 "Pogodna 29",
                 "jaroslawjarzabek@example.com",
                 123123123,
@@ -167,7 +165,6 @@ public class ApplicationTest {
         OldCustomer andrzejNowak = new OldCustomer(
                 "Andrzej",
                 "Nowak",
-                22,
                 "Lazarska 10",
                 "andrzejnowak@example.com",
                 123123113,
@@ -177,7 +174,6 @@ public class ApplicationTest {
         OldCustomer janPrezes = new OldCustomer(
                 "Jan",
                 "Prezes",
-                49,
                 "Wiejska 5",
                 "janprezes@szef.com",
                 123523113,
@@ -195,7 +191,6 @@ public class ApplicationTest {
 
         Customer lidiaWojas = new CustomerBuilder()
                 .withCustomerName("Lidia Wojas")
-                .withAge(22)
                 .withAddress("Swietojanska 32")
                 .withEmail("lidiawojas@example.com")
                 .withBoughtMachines(new ArrayList())
@@ -203,7 +198,6 @@ public class ApplicationTest {
 
         Customer katarzynaKochanowska = new CustomerBuilder()
                 .withCustomerName("Katarzyna Kochanowska")
-                .withAge(41)
                 .withAddress("Wielkopolska 13")
                 .withPhoneNumber(321321321)
                 .withBoughtMachines(new ArrayList())
@@ -211,7 +205,6 @@ public class ApplicationTest {
 
         Customer witoldMorze = new CustomerBuilder()
                 .withCustomerName("Witold Morze")
-                .withAge(91)
                 .withAddress("Morska 3")
                 .withEmail("witoldmorze@example.com")
                 .withPhoneNumber(321321997)

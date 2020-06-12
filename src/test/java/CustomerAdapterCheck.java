@@ -14,7 +14,7 @@ import customer.model.OldCustomer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomersAdapterTest {
+public class CustomerAdapterCheck {
 
     OldCustomerAdapter oldCustomerAdapter;
     CustomerAdapter customerAdapter;
@@ -59,7 +59,6 @@ public class CustomersAdapterTest {
         this.oldCustomer = new OldCustomer(
                 "Jan",
                 "Kowalski",
-                32,
                 "Przykladna 22",
                 "jankowalski@example.com",
                 123123123,
@@ -76,7 +75,6 @@ public class CustomersAdapterTest {
 
         this.customer = customerBuilder
                 .withCustomerName("Jan Kowalski")
-                .withAge(32)
                 .withAddress("Przykladna 22")
                 .withEmail("jankowalski@example.com")
                 .withPhoneNumber(123123123)

@@ -4,6 +4,7 @@ import customer.model.Customer;
 import customer.model.ICustomer;
 import customer.model.OldCustomer;
 import headquarter.Headquarter;
+import headquarter.HeadquarterFacade;
 import headquarter.StatisticalOffice;
 import machine.Machine;
 import machine.MachineFactory;
@@ -27,7 +28,7 @@ public class App {
 
         private static Branch masovianBranch = new Branch("masovianBranch", CustomerType.OLD);
 
-        private static StatisticalOffice StatisticalOffice = new StatisticalOffice();
+        private static StatisticalOffice statisticalOffice;
 
         private static CustomerBuilder customerBuilder = new CustomerBuilder();
 
@@ -96,7 +97,6 @@ public class App {
         String customer_name;
         String customer_address;
         String customer_email;
-        int customer_age;
         int customer_phone_number;
         int customer_branch;
 
@@ -106,8 +106,6 @@ public class App {
         customer_address = customer_in.nextLine();
         System.out.println("Please provide customer email");
         customer_email = customer_in.nextLine();
-        System.out.println("Please provide customer age");
-        customer_age = customer_in.nextInt();
         System.out.println("Please provide customer phone_number");
         customer_phone_number = customer_in.nextInt();
         System.out.println("Please provide customer branch (Pomeranian|Masovian|Silesian");
@@ -115,7 +113,7 @@ public class App {
 
         Customer customerBuild = customerBuilder
                 .withCustomerName(customer_name)
-                .withAge(customer_age).withAddress(customer_address)
+                .withAddress(customer_address)
                 .withEmail(customer_email)
                 .withPhoneNumber(customer_phone_number)
                 .buildCustomer();
@@ -179,7 +177,6 @@ public class App {
                     System.out.println(order3.toString());
         }
 
-
     }
 
     private static void option_third() {
@@ -200,20 +197,20 @@ public class App {
             case 1: ICustomer client1 = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer(client_order);
                     pomeranianBranch.getMachineVendor().orderMachine(MachineType.valueOf(machine_order), client1.getCustomerName(), pomeranianBranch.getBranchName());
                     headquarter.produceAllMachines();
-                List<CompletedOrder> CompletedOrder1 = headquarter.getAvailableMachinesList();
-                CompletedOrder1.stream().forEach(Machine -> System.out.println(Machine.toString()));
+                    List<CompletedOrder> CompletedOrder1 = headquarter.getAvailableMachinesList();
+                    CompletedOrder1.stream().forEach(Machine -> System.out.println(Machine.toString()));
                 break;
             case 2: ICustomer client2 = (ICustomer) masovianBranch.getCustomerManager().getCustomer(client_order);
                     masovianBranch.getMachineVendor().orderMachine(MachineType.valueOf(machine_order), client2.getCustomerName(), masovianBranch.getBranchName());
                     headquarter.produceAllMachines();
-                List<CompletedOrder> CompletedOrder2 = headquarter.getAvailableMachinesList();
-                CompletedOrder2.stream().forEach(Machine -> System.out.println(Machine.toString()));
+                    List<CompletedOrder> CompletedOrder2 = headquarter.getAvailableMachinesList();
+                    CompletedOrder2.stream().forEach(Machine -> System.out.println(Machine.toString()));
                 break;
             case 3: ICustomer client3 = (ICustomer) silensianBranch.getCustomerManager().getCustomer(client_order);
                     silensianBranch.getMachineVendor().orderMachine(MachineType.valueOf(machine_order), client3.getCustomerName(), silensianBranch.getBranchName());
                     headquarter.produceAllMachines();
-                List<CompletedOrder> CompletedOrder3 = headquarter.getAvailableMachinesList();
-                CompletedOrder3.stream().forEach(Machine -> System.out.println(Machine.toString()));
+                    List<CompletedOrder> CompletedOrder3 = headquarter.getAvailableMachinesList();
+                    CompletedOrder3.stream().forEach(Machine -> System.out.println(Machine.toString()));
         }
     }
 
@@ -231,9 +228,31 @@ public class App {
     }
 
     private static void option_sixth() {
+        MachineFactory caterpillarFactory = CaterpillarMachineFactory.getInstance();
+        Machine compactor = caterpillarFactory.createMachine(MachineType.COMPACTOR);
+        Machine dozer = caterpillarFactory.createMachine(MachineType.DOZER);
+        Machine drill = caterpillarFactory.createMachine(MachineType.DRILL);
+        Machine excavator = caterpillarFactory.createMachine(MachineType.EXCAVATOR);
+        Machine trackHouse = caterpillarFactory.createMachine(MachineType.TRACK_LOADER);
+        Machine truck = caterpillarFactory.createMachine(MachineType.TRUCK);
+        System.out.println(MachineType.COMPACTOR);
+        System.out.println(compactor.toString());
+        System.out.println(MachineType.DOZER);
+        System.out.println(dozer.toString());
+        System.out.println(MachineType.DRILL);
+        System.out.println(drill.toString());
+        System.out.println(MachineType.EXCAVATOR);
+        System.out.println(excavator.toString());
+        System.out.println(MachineType.TRACK_LOADER);
+        System.out.println(trackHouse.toString());
+        System.out.println(MachineType.TRUCK);
+        System.out.println(truck.toString());
     }
 
     private static void option_seventh() {
+        statisticalOffice = new StatisticalOffice();
+        statisticalOffice.presentAllClients();
+        statisticalOffice.presentAllMachines();
     }
 
     private static void prepareTestData() {
@@ -267,81 +286,84 @@ public class App {
 
         Customer janKowalski = new CustomerBuilder()
                 .withCustomerName("Jan Kowalski")
-                .withAge(29)
-                .withAddress("Dluga 10")
+                .withAddress("Dluga 10, Gdańsk")
                 .withEmail("jankowalski@example.com")
-                .withPhoneNumber(123123123)
+                .withPhoneNumber(444555666)
                 .withBoughtMachines(new ArrayList())
                 .buildCustomer();
 
         pomeranianBranch.getCustomerManager().addCustomer(janKowalski);
 
+        Customer mpmGdynia = new CustomerBuilder()
+                .withCustomerName("MTM Gdynia")
+                .withAddress("Hutnicza 35, Gdynia")
+                .withEmail("mtmgdynia@mtmgdynia.com")
+                .withPhoneNumber(777888999)
+                .withBoughtMachines(new ArrayList())
+                .buildCustomer();
 
-        OldCustomer jaroslawJarzabek = new OldCustomer(
-                "Jaroslaw",
-                "Jarzabek",
-                41,
-                "Pogodna 29",
-                "jaroslawjarzabek@example.com",
+        pomeranianBranch.getCustomerManager().addCustomer(mpmGdynia);
+
+
+        OldCustomer mostostalWarszawa = new OldCustomer(
+                "Mostostal",
+                "Warszawa SA",
+                "Konstruktorska 12A, Warszawa",
+                "mostostalwarszawa@mostostalwarszawa.com",
                 123123123,
                 machines1
         );
 
-        OldCustomer andrzejNowak = new OldCustomer(
-                "Andrzej",
-                "Nowak",
-                22,
-                "Lazarska 10",
-                "andrzejnowak@example.com",
-                123123113,
+        OldCustomer drogiMosty = new OldCustomer(
+                "Drogi",
+                "Mosty",
+                "Łazarska 10, Pruszków",
+                "drogimosty@drogimosty.com",
+                321321321,
                 machines2
         );
 
-        OldCustomer janPrezes = new OldCustomer(
-                "Jan",
+        OldCustomer prezesPol = new OldCustomer(
                 "Prezes",
-                49,
-                "Wiejska 5",
-                "janprezes@szef.com",
-                123523113,
+                "POL",
+                "Wiejska 5, Wołomin",
+                "prezespol@prezespol.com",
+                111222333,
                 machines3
 
         );
 
-        masovianBranch.getCustomerManager().addCustomer(jaroslawJarzabek);
-        masovianBranch.getCustomerManager().addCustomer(andrzejNowak);
-        masovianBranch.getCustomerManager().addCustomer(janPrezes);
+        masovianBranch.getCustomerManager().addCustomer(mostostalWarszawa);
+        masovianBranch.getCustomerManager().addCustomer(drogiMosty);
+        masovianBranch.getCustomerManager().addCustomer(prezesPol);
 
 
 
-        Customer lidiaWojas = new CustomerBuilder()
-                .withCustomerName("Lidia Wojas")
-                .withAge(22)
-                .withAddress("Swietojanska 32")
-                .withEmail("lidiawojas@example.com")
+        Customer tauron = new CustomerBuilder()
+                .withCustomerName("Tauron")
+                .withAddress("Swietojańska 32, Katowice")
+                .withEmail("tauron@tauron.com")
                 .withBoughtMachines(new ArrayList())
                 .buildCustomer();
 
-        Customer katarzynaKochanowska = new CustomerBuilder()
-                .withCustomerName("Katarzyna Kochanowska")
-                .withAge(41)
-                .withAddress("Wielkopolska 13")
-                .withPhoneNumber(321321321)
+        Customer kwkWujek = new CustomerBuilder()
+                .withCustomerName("Kopalnia Wujek")
+                .withAddress("Górnicza 13")
+                .withPhoneNumber(333222111)
                 .withBoughtMachines(new ArrayList())
                 .buildCustomer();
 
-        Customer witoldMorze = new CustomerBuilder()
-                .withCustomerName("Witold Morze")
-                .withAge(91)
+        Customer autoEx = new CustomerBuilder()
+                .withCustomerName("Autostrady Export")
                 .withAddress("Morska 3")
-                .withEmail("witoldmorze@example.com")
-                .withPhoneNumber(321321997)
+                .withEmail("autoex@autoex.com")
+                .withPhoneNumber(666555444)
                 .withBoughtMachines(new ArrayList())
                 .buildCustomer();
 
-        silensianBranch.getCustomerManager().addCustomer(lidiaWojas);
-        silensianBranch.getCustomerManager().addCustomer(katarzynaKochanowska);
-        silensianBranch.getCustomerManager().addCustomer(witoldMorze);
+        silensianBranch.getCustomerManager().addCustomer(tauron);
+        silensianBranch.getCustomerManager().addCustomer(kwkWujek);
+        silensianBranch.getCustomerManager().addCustomer(autoEx);
 
     }
 }

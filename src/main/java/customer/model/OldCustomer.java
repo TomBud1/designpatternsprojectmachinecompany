@@ -12,8 +12,6 @@ public class OldCustomer implements IOldCustomer {
 
     private String secondName;
 
-    private int age;
-
     private String address;
 
     private String email;
@@ -42,15 +40,6 @@ public class OldCustomer implements IOldCustomer {
 
     public void setSecondName(String secondName) {
         this.secondName = secondName;
-    }
-
-    @Override
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     @Override
@@ -89,10 +78,9 @@ public class OldCustomer implements IOldCustomer {
         this.boughtMachines = boughtMachines;
     }
 
-    public OldCustomer(String firstName, String secondName, int age, String address, String email, int phoneNumber, Machine[] boughtMachines) {
+    public OldCustomer(String firstName, String secondName, String address, String email, int phoneNumber, Machine[] boughtMachines) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.age = age;
         this.address = address;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -104,7 +92,6 @@ public class OldCustomer implements IOldCustomer {
         return "OldCustomer{" +
                 "firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
-                ", age=" + age +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +

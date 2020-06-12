@@ -25,11 +25,6 @@ public class CustomerAdapter implements IOldCustomer {
     }
 
     @Override
-    public int getAge() {
-        return customer.getAge();
-    }
-
-    @Override
     public String getAddress() {
         return customer.getAddress();
     }

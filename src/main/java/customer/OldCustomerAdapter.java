@@ -23,11 +23,6 @@ public class OldCustomerAdapter implements ICustomer {
     }
 
     @Override
-    public int getAge() {
-        return oldCustomer.getAge();
-    }
-
-    @Override
     public String getAddress() {
         return oldCustomer.getAddress();
     }

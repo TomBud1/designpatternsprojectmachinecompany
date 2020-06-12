@@ -18,11 +18,6 @@ public class CustomerBuilder {
         return this;
     }
 
-    public CustomerBuilder withAge(int age) {
-        this.customer.setAge(age);
-        return this;
-    }
-
     public CustomerBuilder withAddress(String address) {
         this.customer.setAddress(address);
         return this;

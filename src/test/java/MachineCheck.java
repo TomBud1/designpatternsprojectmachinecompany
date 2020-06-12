@@ -4,7 +4,7 @@ import machine.MachineFactory;
 import machine.caterpillar.factory.CaterpillarMachineFactory;
 import org.junit.Test;
 
-public class MachineTest {
+public class MachineCheck {
     @Test
     public void create_all_machines_by_fabric_methods_factory() {
         MachineFactory caterpillarFactory = CaterpillarMachineFactory.getInstance();
