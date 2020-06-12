@@ -11,7 +11,7 @@ public class Branch {
 
     private String branchName;
 
-    private MachineVendor machineShop;
+    private MachineVendor machineVendor;
 
     private ICustomerManager customerManager;
 
@@ -20,7 +20,7 @@ public class Branch {
     public Branch(String name, CustomerType customersType) {
         this.branchName = name;
         this.typeOfCustomers = customersType;
-        this.machineShop = new MachineVendor();
+        this.machineVendor = new MachineVendor();
         if (customersType == CustomerType.NORMAL) {
             customerManager = new CustomerManager();
         } else if (customersType == CustomerType.OLD) {
@@ -40,8 +40,8 @@ public class Branch {
         return branchName;
     }
 
-    public MachineVendor getMachineShop() {
-        return machineShop;
+    public MachineVendor getMachineVendor() {
+        return machineVendor;
     }
 
     public ICustomerManager getCustomerManager() {

@@ -102,8 +102,8 @@ public class CustomerTransfer {
 
         IOldCustomer oldCustomer = (IOldCustomer) masovianBranch.getCustomerManager().getCustomer("Prezes");
 
-        masovianBranch.getMachineShop().orderMachine(MachineType.COMPACTOR, oldCustomer.getSecondName(), masovianBranch.getBranchName());
-        masovianBranch.getMachineShop().orderMachine(MachineType.DOZER, oldCustomer.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineVendor().orderMachine(MachineType.COMPACTOR, oldCustomer.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineVendor().orderMachine(MachineType.DOZER, oldCustomer.getSecondName(), masovianBranch.getBranchName());
 
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();
@@ -123,7 +123,7 @@ public class CustomerTransfer {
 
         ICustomer newPomeranianCustomer = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Prezes");
 
-        pomeranianBranch.getMachineShop().orderMachine(MachineType.COMPACTOR, newPomeranianCustomer.getCustomerName(), pomeranianBranch.getBranchName());
+        pomeranianBranch.getMachineVendor().orderMachine(MachineType.COMPACTOR, newPomeranianCustomer.getCustomerName(), pomeranianBranch.getBranchName());
 
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();

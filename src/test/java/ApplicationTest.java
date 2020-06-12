@@ -45,7 +45,7 @@ public class ApplicationTest {
     @Test
     public void should_order_dozer_machine_for_new_customer() {
         ICustomer client = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Kowalski");
-        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
+        pomeranianBranch.getMachineVendor().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
 
         Order order = headquarter.getOrderList().stream()
                 .filter(item -> item.getCustomerName().equals("Jan Kowalski"))
@@ -57,7 +57,7 @@ public class ApplicationTest {
     @Test
     public void should_build_ordered_machine() {
         ICustomer client = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer("Jan Kowalski");
-        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
+        pomeranianBranch.getMachineVendor().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
         headquarter.produceAllMachines();
 
         List<CompletedOrder> CompletedOrder = headquarter.getAvailableMachinesList();
@@ -72,10 +72,10 @@ public class ApplicationTest {
         ICustomer client2 = (ICustomer) silensianBranch.getCustomerManager().getCustomer("Witold Morze");
         IOldCustomer client3 = (IOldCustomer) masovianBranch.getCustomerManager().getCustomer("Prezes");
 
-        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
-        silensianBranch.getMachineShop().orderMachine(MachineType.COMPACTOR, client2.getCustomerName(), silensianBranch.getBranchName());
-        masovianBranch.getMachineShop().orderMachine(MachineType.DRILL, client3.getSecondName(), masovianBranch.getBranchName());
-        masovianBranch.getMachineShop().orderMachine(MachineType.EXCAVATOR, client3.getSecondName(), masovianBranch.getBranchName());
+        pomeranianBranch.getMachineVendor().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
+        silensianBranch.getMachineVendor().orderMachine(MachineType.COMPACTOR, client2.getCustomerName(), silensianBranch.getBranchName());
+        masovianBranch.getMachineVendor().orderMachine(MachineType.DRILL, client3.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineVendor().orderMachine(MachineType.EXCAVATOR, client3.getSecondName(), masovianBranch.getBranchName());
 
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();
@@ -110,13 +110,13 @@ public class ApplicationTest {
         ICustomer client2 = (ICustomer) silensianBranch.getCustomerManager().getCustomer("Witold Morze");
         IOldCustomer client3 = (IOldCustomer) masovianBranch.getCustomerManager().getCustomer("Prezes");
 
-        pomeranianBranch.getMachineShop().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
-        pomeranianBranch.getMachineShop().orderMachine(MachineType.COMPACTOR, client.getCustomerName(), pomeranianBranch.getBranchName());
+        pomeranianBranch.getMachineVendor().orderMachine(MachineType.DOZER, client.getCustomerName(), pomeranianBranch.getBranchName());
+        pomeranianBranch.getMachineVendor().orderMachine(MachineType.COMPACTOR, client.getCustomerName(), pomeranianBranch.getBranchName());
 
-        silensianBranch.getMachineShop().orderMachine(MachineType.DRILL, client2.getCustomerName(), silensianBranch.getBranchName());
+        silensianBranch.getMachineVendor().orderMachine(MachineType.DRILL, client2.getCustomerName(), silensianBranch.getBranchName());
 
-        masovianBranch.getMachineShop().orderMachine(MachineType.EXCAVATOR, client3.getSecondName(), masovianBranch.getBranchName());
-        masovianBranch.getMachineShop().orderMachine(MachineType.TRACK_LOADER, client3.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineVendor().orderMachine(MachineType.EXCAVATOR, client3.getSecondName(), masovianBranch.getBranchName());
+        masovianBranch.getMachineVendor().orderMachine(MachineType.TRACK_LOADER, client3.getSecondName(), masovianBranch.getBranchName());
 
         headquarter.produceAllMachines();
         headquarter.informAboutNewMachines();

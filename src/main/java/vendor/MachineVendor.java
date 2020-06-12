@@ -11,8 +11,8 @@ public class MachineVendor {
         headquarter = headquarter.getInstance();
     }
 
-    public void orderMachine(MachineType MachineType, String customerName, String branchName) {
-        headquarter.addMachineToOrderList(MachineType, customerName, branchName);
+    public void orderMachine(MachineType machineType, String customerName, String branchName) {
+        headquarter.addMachineToOrderList(machineType, customerName, branchName);
     }
 }
 

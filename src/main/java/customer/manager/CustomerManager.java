@@ -2,7 +2,6 @@ package customer.manager;
 
 import machine.Machine;
 import customer.model.ICustomer;
-
 import java.util.ArrayList;
 import java.util.List;
 
