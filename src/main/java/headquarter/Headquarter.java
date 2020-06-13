@@ -65,10 +65,6 @@ public class Headquarter {
             orderList.add(new Order(MachineType, customerName, branchName));
         }
 
-    public static Headquarter getHeadquarter() {
-        return headquarter;
-    }
-
     public List<Branch> getBranchList() {
         return branchList;
     }
@@ -81,7 +77,7 @@ public class Headquarter {
         return availableMachinesList;
     }
 
-    public MachineFactory getFordFactory() {
+    public MachineFactory getCaterpillarFactory() {
         return caterpillarFactory;
     }
 }

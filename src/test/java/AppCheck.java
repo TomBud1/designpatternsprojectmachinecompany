@@ -132,7 +132,7 @@ public class AppCheck {
     private void createBranch() {
         preparePomeranianBranch();
         prepareSilesianBranch();
-        prepareWarszawaBranch();
+        prepareMasovianBranch();
     }
 
     private void preparePomeranianBranch() {
@@ -149,7 +149,7 @@ public class AppCheck {
         pomeranianBranch.getCustomerManager().addCustomer(janKowalski);
     }
 
-    private void prepareWarszawaBranch() {
+    private void prepareMasovianBranch() {
         masovianBranch = new Branch("masovianBranch", CustomerType.OLD);
 
         OldCustomer jaroslawJarzabek = new OldCustomer(

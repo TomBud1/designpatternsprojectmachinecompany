@@ -37,9 +37,17 @@ public class App {
 
         private static Scanner customer_in = new Scanner(System.in);
 
-        private static Scanner customer_order = new Scanner(System.in);
+        private static Scanner customer_in_order = new Scanner(System.in);
 
-        private static Scanner machine = new Scanner(System.in);
+        private static Scanner customer_in_build_machine = new Scanner(System.in);
+
+        private static Scanner customer_order2 = new Scanner(System.in);
+
+        private static Scanner customer_order3 = new Scanner(System.in);
+
+        private static Scanner machine2 = new Scanner(System.in);
+
+        private static Scanner machine3 = new Scanner(System.in);
 
 
 
@@ -137,15 +145,15 @@ public class App {
 
         int customer_branch;
         System.out.println("Please provide customer branch (Pomeranian|Masovian|Silesian");
-        customer_branch = customer_in.nextInt();
+        customer_branch = customer_in_order.nextInt();
 
         String client_order;
         System.out.println("Please provide customer name");
-        client_order = customer_order.nextLine();
+        client_order = customer_order2.nextLine();
 
         String machine_order;
         System.out.println("Please provide machine type");
-        machine_order = machine.nextLine();
+        machine_order = machine2.nextLine();
 
 
         switch (customer_branch)
@@ -185,15 +193,15 @@ public class App {
         caterpillarMachineFactory = CaterpillarMachineFactory.getInstance();
         int customer_branch;
         System.out.println("Please provide customer branch (Pomeranian|Masovian|Silesian");
-        customer_branch = customer_in.nextInt();
+        customer_branch = customer_in_build_machine.nextInt();
 
         String client_order;
         System.out.println("Please provide customer name");
-        client_order = customer_order.nextLine();
+        client_order = customer_order3.nextLine();
 
         String machine_order;
         System.out.println("Please provide machine type");
-        machine_order = machine.nextLine();
+        machine_order = machine3.nextLine();
 
 
         switch (customer_branch)

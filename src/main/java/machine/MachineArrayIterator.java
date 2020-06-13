@@ -1,8 +1,5 @@
 package machine;
 
-import machine.Machine;
-import machine.MachineIterator;
-
 public class MachineArrayIterator implements MachineIterator {
 
     Machine[] boughtMachines;

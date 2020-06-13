@@ -6,13 +6,13 @@ import machine.caterpillar.*;
 
 
 public class CaterpillarMachineFactory extends MachineFactory {
-    private static CaterpillarMachineFactory machineFactory;
+    private static CaterpillarMachineFactory caterpillarMachineFactory;
 
     public static CaterpillarMachineFactory getInstance() {
-        if (machineFactory == null) {
-            machineFactory = new CaterpillarMachineFactory();
+        if (caterpillarMachineFactory == null) {
+            caterpillarMachineFactory = new CaterpillarMachineFactory();
         }
-        return machineFactory;
+        return caterpillarMachineFactory;
     }
 
     public Machine createMachine(MachineType machineType) {
