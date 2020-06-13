@@ -4,7 +4,6 @@ import customer.model.Customer;
 import customer.model.ICustomer;
 import customer.model.OldCustomer;
 import headquarter.Headquarter;
-import headquarter.HeadquarterFacade;
 import headquarter.StatisticalOffice;
 import machine.Machine;
 import machine.MachineFactory;
@@ -29,6 +28,8 @@ public class App {
         private static Branch masovianBranch = new Branch("masovianBranch", CustomerType.OLD);
 
         private static StatisticalOffice statisticalOffice;
+
+        private static CaterpillarMachineFactory caterpillarMachineFactory;
 
         private static CustomerBuilder customerBuilder = new CustomerBuilder();
 
@@ -180,6 +181,8 @@ public class App {
     }
 
     private static void option_third() {
+
+        caterpillarMachineFactory = CaterpillarMachineFactory.getInstance();
         int customer_branch;
         System.out.println("Please provide customer branch (Pomeranian|Masovian|Silesian");
         customer_branch = customer_in.nextInt();
@@ -192,6 +195,7 @@ public class App {
         System.out.println("Please provide machine type");
         machine_order = machine.nextLine();
 
+
         switch (customer_branch)
         {
             case 1: ICustomer client1 = (ICustomer) pomeranianBranch.getCustomerManager().getCustomer(client_order);
@@ -199,22 +203,29 @@ public class App {
                     headquarter.produceAllMachines();
                     List<CompletedOrder> CompletedOrder1 = headquarter.getAvailableMachinesList();
                     CompletedOrder1.stream().forEach(Machine -> System.out.println(Machine.toString()));
+                    pomeranianBranch.getCustomerManager().updateCustomer(client_order, caterpillarMachineFactory.createMachine(MachineType.valueOf(machine_order)));
+
                 break;
             case 2: ICustomer client2 = (ICustomer) masovianBranch.getCustomerManager().getCustomer(client_order);
                     masovianBranch.getMachineVendor().orderMachine(MachineType.valueOf(machine_order), client2.getCustomerName(), masovianBranch.getBranchName());
                     headquarter.produceAllMachines();
                     List<CompletedOrder> CompletedOrder2 = headquarter.getAvailableMachinesList();
                     CompletedOrder2.stream().forEach(Machine -> System.out.println(Machine.toString()));
+                    masovianBranch.getCustomerManager().updateCustomer(client_order, caterpillarMachineFactory.createMachine(MachineType.valueOf(machine_order)));
+
                 break;
             case 3: ICustomer client3 = (ICustomer) silensianBranch.getCustomerManager().getCustomer(client_order);
                     silensianBranch.getMachineVendor().orderMachine(MachineType.valueOf(machine_order), client3.getCustomerName(), silensianBranch.getBranchName());
                     headquarter.produceAllMachines();
                     List<CompletedOrder> CompletedOrder3 = headquarter.getAvailableMachinesList();
                     CompletedOrder3.stream().forEach(Machine -> System.out.println(Machine.toString()));
+                    silensianBranch.getCustomerManager().updateCustomer(client_order, caterpillarMachineFactory.createMachine(MachineType.valueOf(machine_order)));
+
         }
     }
 
     private static void option_fourth() {
+
         System.out.println(headquarter.getOrderList().toString());
     }
 

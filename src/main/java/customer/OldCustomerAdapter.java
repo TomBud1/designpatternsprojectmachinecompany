@@ -1,7 +1,7 @@
 package customer;
 
-import customer.model.IOldCustomer;
 import customer.model.ICustomer;
+import customer.model.IOldCustomer;
 import machine.Machine;
 
 import java.util.ArrayList;

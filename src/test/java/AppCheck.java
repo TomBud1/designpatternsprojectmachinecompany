@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import vendor.Branch;
 import customer.CustomerType;
-import customer.OldCustomerAdapter;
 import customer.CustomerBuilder;
 import customer.model.IOldCustomer;
 import customer.model.ICustomer;
@@ -19,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ApplicationCheck {
+public class AppCheck {
 
     Headquarter headquarter;
 

@@ -11,5 +11,4 @@ public interface ICustomer {
     String getEmail();
     int getPhoneNumber();
     List<Machine> getBoughtMachines();
-
 }

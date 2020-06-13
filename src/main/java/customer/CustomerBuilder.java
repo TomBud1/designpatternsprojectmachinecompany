@@ -1,7 +1,7 @@
 package customer;
 
-import machine.Machine;
 import customer.model.Customer;
+import machine.Machine;
 
 import java.util.List;
 

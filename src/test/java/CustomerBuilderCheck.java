@@ -1,7 +1,6 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import customer.CustomerBuilder;
 import customer.model.Customer;
 
 public class CustomerBuilderCheck {

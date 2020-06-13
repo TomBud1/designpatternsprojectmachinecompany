@@ -1,8 +1,8 @@
 package customer;
 
-import machine.Machine;
-import customer.model.IOldCustomer;
 import customer.model.ICustomer;
+import customer.model.IOldCustomer;
+import machine.Machine;
 
 public class CustomerAdapter implements IOldCustomer {
 
